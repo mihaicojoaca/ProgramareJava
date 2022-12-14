@@ -1,6 +1,6 @@
 {
-  "name" : "Bill",
-  "age" : 25,
+  "name" : "Anna",
+  "age" : 23,
   "passedExam" : false,
-  "grades" : [ 4, 5, 6 ]
+  "grades" : [ 2, 1, 3 ]
 }

@@ -19,7 +19,7 @@ import java.util.List;
 public class FileUtilty {
     private static final String PATH_TO_FILE = "src/main/resources/fisier.txt";
 
-    public static void WriteToFile(){
+    public static void WriteToFile() throws IOException {
         File file = new File(PATH_TO_FILE);
 
         ObjectMapper mapper = new ObjectMapper();
@@ -32,11 +32,7 @@ public class FileUtilty {
         persons.add(person1);
         persons.add(person2);
 
-        try {
-            writer.writeValue(file, person1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writer.writeValue(file, persons);
     }
 
     public static void readFromFile(){

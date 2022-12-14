@@ -11,14 +11,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import static org.example.Matrice.generate;
+import static org.example.FileUtilty.WriteToFile;
+import static org.example.FileUtilty.readFromFile;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         tableExample();
     }
-    public static void tableExample(){
+    public static void tableExample() throws IOException {
         JFrame f = new JFrame();
         String[] column = {"0","0","0","0","0","0"};
 
@@ -51,5 +54,8 @@ public class Main {
         f.getContentPane().setLayout(new FlowLayout());
         f.setSize(300, 400);
         f.setVisible(true);
+
+        WriteToFile();
+        readFromFile();
     }
 }
